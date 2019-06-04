@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CSharpDapperAndFluentMap.Data\CSharpDapperAndFluentMap.Data.csproj" />
+    <ProjectReference Include="..\CSharpDapperAndFluentMap.Domain\CSharpDapperAndFluentMap.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+</Project>

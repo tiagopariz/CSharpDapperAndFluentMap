@@ -1,0 +1,36 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "build",
+                "${workspaceFolder}/src/CSharpDapperAndFluentMap.Prompt/CSharpDapperAndFluentMap.Prompt.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "publish",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "publish",
+                "${workspaceFolder}/src/CSharpDapperAndFluentMap.Prompt/CSharpDapperAndFluentMap.Prompt.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        },
+        {
+            "label": "watch",
+            "command": "dotnet",
+            "type": "process",
+            "args": [
+                "watch",
+                "run",
+                "${workspaceFolder}/src/CSharpDapperAndFluentMap.Prompt/CSharpDapperAndFluentMap.Prompt.csproj"
+            ],
+            "problemMatcher": "$tsc"
+        }
+    ]
+}

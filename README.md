@@ -36,7 +36,7 @@ Adicione na raiz do projeto o arquivo **[global.json](global.json)**, para defin
 
 ## Banco de dados
 
-Use o arquivo **[CreateDb.sql](/sql/CreateDb.sql)** para criar o banco de dados com as tabelas e os dados de exemplo.
+Use o arquivo **[CreateDB.sql](/sql/CreateDB.sql)** para criar o banco de dados com as tabelas e os dados de exemplo.
 
 ![Diagram](/sql/DapperDiagram.PNG)
 

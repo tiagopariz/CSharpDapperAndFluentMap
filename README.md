@@ -8,6 +8,14 @@
 
 `dotnet "new" "sln" "-n" "CSharpDapperAndFluentMap" "-o" "c:\GitHub\CSharpDapperAndFluentMap"`
 
+Adicione na raiz do projeto o arquivo **[global.json](global.json)**, para definir a versão do .NET Core:
+
+`{
+  "sdk": {
+    "version": "2.2.204"
+  }
+}`
+
 ### Projeto de dados
 
 `dotnet "new" "classlib" "-lang" "C#" "-n" "CSharpDapperAndFluentMap.Data" "-o" "src\CSharpDapperAndFluentMap.Data"`
@@ -39,6 +47,8 @@ Crie no projeto de domínio, na pasta Entities, as classes:
 - Entity
 - Category
 - Person
+- Project
+- PersonProject
 - Priority
 - Ticket
 
@@ -72,6 +82,10 @@ Adicione as classes específicas:
 - CategoryRepository
 - PersonQuery
 - PersonRepository
+- ProjectQuery
+- ProjectRepository
+- PersonProjectQuery
+- PersonProjectRepository
 - PriorityQuery
 - PriorityRepository
 - TicketQuery
@@ -83,11 +97,15 @@ Crie uma pasta chamada Mappings no projeto de dados, e inclua os mapeamentos:
 
 - CategoryMap
 - PersonMap
+- ProjectMap
+- PersonProjectMap
 - PriorityMap
 - TicketMap
 
 Crie a classe RegisterMappings na raiz do projeto de dados.
 
+## Projeto Console
+
 Adicione referência ao projeto de dados e domínio no projeto de console.
 
-Adicioce uma chamado ao método Register da classe RegisterMappings no método Main da classe Program.
+Adicione uma chamada ao método Register da classe RegisterMappings no método Main da classe Program.

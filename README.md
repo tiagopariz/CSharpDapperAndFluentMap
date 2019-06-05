@@ -2,9 +2,19 @@
 
 ## Introdução
 
-## Crie a solução e os projetos
+Em 2016 o Felipe Cecon escrever o post [C#: Usando Dapper com FluentMap, Linq e Lambda para consultas](https://medium.com/filipececcon/c-usando-dapper-com-fluentmap-linq-e-lambda-para-consultas-6f3131bff244), onde ele ensina como usar o Dapper com FluentMap usando o .NET Framework 4.5.1, possibilitando o uso de Linq e Lambda dentro do projeto.
+
+Hoje, com o .NET Core em evidência, resolvi criar um novo projeto me inspirando no post dele, onde é possível perceber alguma facilidades e restrições quando se usa um Micro-ORM como o Dapper. E o FluentMap vai ajudar a escrever menos código, principalmente queries em SQL ANSI.
+
+## Criando a solução e os projetos
+
+Eu uso uma extensão do VS Code que facilita bastante a criação de arquivos de solução e projetos, é a [vscode-solution-explorer](https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer) do [Fernando Escobar](https://github.com/fernandoescolar).
+
+Eu vou fornecer os comandos de criação, mas se quiser, conheça e use a extensão para agilizar a criação da estrutura pelo VS Code.
 
 ### Solução
+
+O nome da solução será CSharpDapperAndFluentMap.sln e ficará armazenada na pasta C:\GitHub, mas sinta-se a vontade para usar o seu próprio diretório.
 
 `dotnet "new" "sln" "-n" "CSharpDapperAndFluentMap" "-o" "c:\GitHub\CSharpDapperAndFluentMap"`
 

@@ -28,11 +28,26 @@ namespace CSharpDapperAndFluentMap.Data.Queries
         {
             using (var db = new SqlConnection(ConnectionString))
             {
-                return db.GetAll<Person, PersonProject, Project, Person>((person, personProject, project) =>
+                var people = new List<Person>();
+                db.GetAll<Person, PersonProject, Project, Person>((person, personProject, project) =>
                 {
-                    var p = project;
+                    var p = people.FirstOrDefault(x => x.Id == person.Id);
+
+                    if (p != null)
+                    {
+                        if (personProject != null && personProject.PersonId == p.Id)
+                            p.Projects.Add(project);
+                    }
+                    else
+                    {
+                        if (personProject != null && personProject.PersonId == person.Id)
+                            person.Projects.Add(project);
+                        people.Add(person);                       
+                    }                    
+
                     return person;
                 });
+                return people;
             }
         }       
     }

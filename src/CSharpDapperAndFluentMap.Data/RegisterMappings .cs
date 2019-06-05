@@ -12,6 +12,8 @@ namespace CSharpDapperAndFluentMap.Data
             {
                 config.AddMap(new CategoryMap());
                 config.AddMap(new PersonMap());
+                config.AddMap(new ProjectMap());
+                config.AddMap(new PersonProjectMap());
                 config.AddMap(new PriorityMap());
                 config.AddMap(new TicketMap());
                 config.ForDommel();

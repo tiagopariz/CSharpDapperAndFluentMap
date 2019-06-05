@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Linq;
 using System.Linq.Expressions;
 using CSharpDapperAndFluentMap.Domain.Entities;
 using Dommel;
@@ -21,6 +22,18 @@ namespace CSharpDapperAndFluentMap.Data.Queries
                     return person;
                 });
             }
-        }
+        } 
+
+        public IEnumerable<Person> GetAllWithProjects()
+        {
+            using (var db = new SqlConnection(ConnectionString))
+            {
+                return db.GetAll<Person, PersonProject, Project, Person>((person, personProject, project) =>
+                {
+                    var p = project;
+                    return person;
+                });
+            }
+        }       
     }
 }

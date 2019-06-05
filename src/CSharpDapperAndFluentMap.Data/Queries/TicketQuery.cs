@@ -15,19 +15,6 @@ namespace CSharpDapperAndFluentMap.Data.Queries
     {
         public override IEnumerable<Ticket> GetAll()
         {
-            using (var db = new SqlConnection(ConnectionString))
-            {
-                return db.GetAll<Ticket, Person, Category, Ticket>((ticket, person, category) =>
-                {
-                    ticket.Person = person;
-                    ticket.Person.Category = category;
-                    return ticket;
-                });
-            }
-        }
-
-        public IEnumerable<Ticket> GetAll2()
-        {
             var sql = "SELECT " +
                        "    [t].[Id], " +
                        "    [t].[Description], " +

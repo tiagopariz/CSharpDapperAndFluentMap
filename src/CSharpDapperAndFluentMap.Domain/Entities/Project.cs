@@ -2,8 +2,8 @@
 
 namespace CSharpDapperAndFluentMap.Domain.Entities
 {
-    public class Priority : Entity
+    public class Project : Entity
     {
-        public string Description { get; set; }
+        public string Name { get; set; }
     }
 }

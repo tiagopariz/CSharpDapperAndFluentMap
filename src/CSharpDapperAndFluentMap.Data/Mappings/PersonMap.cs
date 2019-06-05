@@ -13,6 +13,7 @@ namespace CSharpDapperAndFluentMap.Data.Mappings
             Map(x => x.Age).ToColumn("Age");
             Map(x => x.CategoryId).ToColumn("CategoryId");
             Map(x => x.Category).Ignore();
+            Map(x => x.Projects).Ignore();
         }
     }
 }

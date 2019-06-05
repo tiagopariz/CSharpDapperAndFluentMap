@@ -30,6 +30,8 @@
 
 Use o arquivo **CreatDb.sql** para criar o banco de dados com as tabelas e os dados de exemplo.
 
+![Diagram](/sql/DapperDiagram.PNG)
+
 ## Entidades
 
 Crie no projeto de domínio, na pasta Entities, as classes:

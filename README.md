@@ -10,7 +10,7 @@ Hoje, com o .NET Core em evidência, resolvi criar um novo projeto me inspirando
 
 Eu uso uma extensão do VS Code que facilita bastante a criação de arquivos de solução e projetos, é a [vscode-solution-explorer](https://marketplace.visualstudio.com/items?itemName=fernandoescolar.vscode-solution-explorer) do [Fernando Escobar](https://github.com/fernandoescolar).
 
-Eu vou fornecer os comandos de criação, mas se quiser, conheça e use a extensão para agilizar a criação da estrutura pelo VS Code.
+Eu vou fornecer os comandos, mas se quiser, conheça e use a extensão para agilizar a criação da estrutura pelo VS Code.
 
 ### Solução
 
